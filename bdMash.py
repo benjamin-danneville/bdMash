@@ -173,15 +173,20 @@ if cmds.window(bdMash_win, exists=True):
     cmds.deleteUI(bdMash_win)
 
 # Start with the Window 
-cmds.window(bdMash_win, widthHeight=(300, 30)) 
+cmds.window(bdMash_win, widthHeight=(510, 145)) 
 # Add a single column layout to add controls into 
 cmds.columnLayout(adjustableColumn=True) 
 
 cmds.text("\n1 - Select all the groups you want to apply Mash to", align='left')
-cmds.text("2 - Select the group containing the meshes that will be used for the MASH called 'BRUSHSTROKES'", align='left')
+cmds.text("2 - Select the group containing the meshes that will be used for the MASH\n   - it name must contain 'BRUSHSTROKES' in it's name", align='left')
 cmds.text("\n3 - Click the Mash Button !\n", align='left')
 
 # Add controls to the Layout 
 cmds.button( label="Mash", command=MashButton) 
+
+#Credits
+cmds.text("-------------------------------------------------------------------------------------------------------------------------------", align='left')
+cmds.text("copyright Benjamin Danneville                                                                                         licence GNU GPL", align='left')
+
 # Display the window 
 cmds.showWindow(bdMash_win)
